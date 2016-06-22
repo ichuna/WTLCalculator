@@ -25,10 +25,7 @@ BOOL CMainFrame::OnIdle()
 LRESULT CMainFrame::OnCreate(UINT /*uMsg*/, WPARAM /*wParam*/, LPARAM /*lParam*/, BOOL& bHandled)
 {
 	m_hWndClient = m_view.Create(m_hWnd, WS_CHILD | WS_VISIBLE );
-	
-//	m_view.DoModal();
-//	m_view.OnCreate(1, NULL, NULL, bHandled);
-	// register object for message filtering and idle updates
+
 	CMessageLoop* pLoop = _Module.GetMessageLoop();
 	ATLASSERT(pLoop != NULL);
 	pLoop->AddMessageFilter(this);

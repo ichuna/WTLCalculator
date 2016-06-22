@@ -20,9 +20,10 @@ public:
 		MESSAGE_HANDLER(WM_INITDIALOG, OnCreate)
 		/*COMMAND_ID_HANDLER(ID_0_BUTTON, OnButton)*/
 		COMMAND_RANGE_HANDLER(ID_0_BUTTON, ID_9_BUTTON, OnInsertNumber);
+		COMMAND_RANGE_HANDLER(ID_PLUS_BUTTON, ID_CLEAR_BUTTON, OnInsertOperation);
 	END_MSG_MAP()
 
-// Handler prototypes (uncomment arguments if needed):
+//  Handler prototypes (uncomment arguments if needed):
 //	LRESULT MessageHandler(UINT /*uMsg*/, WPARAM /*wParam*/, LPARAM /*lParam*/, BOOL& /*bHandled*/)
 //	LRESULT CommandHandler(WORD /*wNotifyCode*/, WORD /*wID*/, HWND /*hWndCtl*/, BOOL& /*bHandled*/)
 //	LRESULT NotifyHandler(int /*idCtrl*/, LPNMHDR /*pnmh*/, BOOL& /*bHandled*/)
@@ -31,9 +32,8 @@ public:
 private:
 	void CreateButton(CRect rect, const char * buttonName, UINT id);
 	LRESULT OnInsertNumber(UINT /*uMsg*/, WPARAM /*wParam*/, HWND /*lParam*/, BOOL& /*bHandled*/);
-
+	LRESULT OnInsertOperation(UINT /*uMsg*/, WPARAM /*wParam*/, HWND /*lParam*/, BOOL& /*bHandled*/);
 private:
 	CEdit m_calcDisplay;
 	CCalculatorLogic m_calcLogic;
-	std::map<UINT, char> m_chars;
 };

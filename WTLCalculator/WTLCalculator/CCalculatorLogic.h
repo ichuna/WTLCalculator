@@ -3,10 +3,25 @@
 
 class CCalculatorLogic
 {
+	enum OperationType
+	{
+		plus = 0x041,
+		minus,
+		div,
+		multiply,
+		equally,
+		clear,
+		none
+	};
 public:
-	boost::optional<std::wstring> GetCurrentValue()const;
-
+	std::wstring GetCurrentValue()const;
+	void AppendNumber(std::wstring const &number);
+	void AppendOperation(int operation);
 private:
-	boost::optional<std::wstring> m_buffer;
-	boost::optional<std::wstring> m_current;
+	static wchar_t OperationTypeToChar(OperationType const &opType);
+	float CalculateExpression();
+private:
+	OperationType m_operationType = none;
+	std::wstring m_left;
+	std::wstring m_right;
 };
