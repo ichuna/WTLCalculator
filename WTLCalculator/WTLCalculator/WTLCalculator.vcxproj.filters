@@ -9,7 +9,10 @@
       <UniqueIdentifier>{35b9d369-c25e-4796-8956-bb346379a9fa}</UniqueIdentifier>
       <Extensions>h;hpp;hxx;hm;inl;inc</Extensions>
     </Filter>
-    <Filter Include="Resource Files">
+    <Filter Include="Header Files\ButtonsCanvas">
+      <UniqueIdentifier>{a55a0045-39de-41c6-af66-e04c02c5bd6c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Resource Files">
       <UniqueIdentifier>{b4afec7c-df84-4895-a5f3-dfb5af2e7c2f}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;jpg;jpeg;jpe;manifest</Extensions>
     </Filter>
@@ -30,6 +33,12 @@
     <ClCompile Include="AboutDlg.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="ButtonsCanvas.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CCalculatorLogic.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="stdafx.h">
@@ -47,18 +56,24 @@
     <ClInclude Include="resource.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="ButtonsCanvas.h">
+      <Filter>Header Files\ButtonsCanvas</Filter>
+    </ClInclude>
+    <ClInclude Include="CCalculatorLogic.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="WTLCalculator.rc">
-      <Filter>Resource Files</Filter>
+      <Filter>Header Files\Resource Files</Filter>
     </ResourceCompile>
   </ItemGroup>
   <ItemGroup>
     <Image Include="res\toolbar.bmp">
-      <Filter>Resource Files</Filter>
+      <Filter>Header Files\Resource Files</Filter>
     </Image>
     <Image Include="res\WTLCalculator.ico">
-      <Filter>Resource Files</Filter>
+      <Filter>Header Files\Resource Files</Filter>
     </Image>
   </ItemGroup>
 </Project>

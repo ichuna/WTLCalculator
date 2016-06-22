@@ -1,39 +1,19 @@
-// WTLCalculator.cpp : main source file for WTLCalculator.exe
+// WTLCalc2.cpp : main source file for WTLCalc2.exe
 //
 
 #include "stdafx.h"
 
+#include <atlframe.h>
+#include <atlctrls.h>
+#include <atldlgs.h>
+
 #include "resource.h"
 
-#include "WTLCalculatorView.h"
-#include "aboutdlg.h"
-#include "MainFrm.h"
+#include "MainDlg.h"
 
 CAppModule _Module;
 
-int Run(LPTSTR /*lpstrCmdLine*/ = NULL, int nCmdShow = SW_SHOWDEFAULT)
-{
-	CMessageLoop theLoop;
-	_Module.AddMessageLoop(&theLoop);
-
-	CMainFrame wndMain;
-	RECT rc{ 0, 0, 250, 400 };
-	if(wndMain.CreateEx(NULL, rc) == NULL)
-	{
-		ATLTRACE(_T("Main window creation failed!\n"));
-		return 0;
-	}
-
-	wndMain.CenterWindow();
-	wndMain.ShowWindow(nCmdShow);
-
-	int nRet = theLoop.Run();
-
-	_Module.RemoveMessageLoop();
-	return nRet;
-}
-
-int WINAPI _tWinMain(HINSTANCE hInstance, HINSTANCE /*hPrevInstance*/, LPTSTR lpstrCmdLine, int nCmdShow)
+int WINAPI _tWinMain(HINSTANCE hInstance, HINSTANCE /*hPrevInstance*/, LPTSTR /*lpstrCmdLine*/, int /*nCmdShow*/)
 {
 	HRESULT hRes = ::CoInitialize(NULL);
 // If you are running on NT 4.0 or higher you can use the following call instead to 
@@ -49,7 +29,12 @@ int WINAPI _tWinMain(HINSTANCE hInstance, HINSTANCE /*hPrevInstance*/, LPTSTR lp
 	hRes = _Module.Init(NULL, hInstance);
 	ATLASSERT(SUCCEEDED(hRes));
 
-	int nRet = Run(lpstrCmdLine, nCmdShow);
+	int nRet = 0;
+	// BLOCK: Run application
+	{
+		CMainDlg dlgMain;
+		nRet = dlgMain.DoModal();
+	}
 
 	_Module.Term();
 	::CoUninitialize();

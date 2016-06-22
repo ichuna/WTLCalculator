@@ -19,7 +19,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{E66C7F1D-20F3-4894-9F08-6E5DF72C27A7}</ProjectGuid>
+    <ProjectGuid>{1EF80893-E0B7-4E98-BE1D-6B17106BF210}</ProjectGuid>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -101,11 +101,11 @@
       <MkTypLibCompatible>false</MkTypLibCompatible>
       <TargetEnvironment>Win32</TargetEnvironment>
       <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <HeaderFileName>WTLCalculator.h</HeaderFileName>
-      <InterfaceIdentifierFileName>WTLCalculator_i.c</InterfaceIdentifierFileName>
-      <ProxyFileName>WTLCalculator_p.c</ProxyFileName>
+      <HeaderFileName>CalcGraphics.h</HeaderFileName>
+      <InterfaceIdentifierFileName>CalcGraphics_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>CalcGraphics_p.c</ProxyFileName>
       <GenerateStublessProxies>true</GenerateStublessProxies>
-      <TypeLibraryName>$(IntDir)/WTLCalculator.tlb</TypeLibraryName>
+      <TypeLibraryName>$(IntDir)/CalcGraphics.tlb</TypeLibraryName>
       <DllDataFileName />
     </Midl>
   </ItemDefinitionGroup>
@@ -132,11 +132,11 @@
     <Midl>
       <MkTypLibCompatible>false</MkTypLibCompatible>
       <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <HeaderFileName>WTLCalculator.h</HeaderFileName>
-      <InterfaceIdentifierFileName>WTLCalculator_i.c</InterfaceIdentifierFileName>
-      <ProxyFileName>WTLCalculator_p.c</ProxyFileName>
+      <HeaderFileName>CalcGraphics.h</HeaderFileName>
+      <InterfaceIdentifierFileName>CalcGraphics_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>CalcGraphics_p.c</ProxyFileName>
       <GenerateStublessProxies>true</GenerateStublessProxies>
-      <TypeLibraryName>$(IntDir)/WTLCalculator.tlb</TypeLibraryName>
+      <TypeLibraryName>$(IntDir)/CalcGraphics.tlb</TypeLibraryName>
       <DllDataFileName />
     </Midl>
   </ItemDefinitionGroup>
@@ -161,11 +161,11 @@
       <MkTypLibCompatible>false</MkTypLibCompatible>
       <TargetEnvironment>Win32</TargetEnvironment>
       <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <HeaderFileName>WTLCalculator.h</HeaderFileName>
-      <InterfaceIdentifierFileName>WTLCalculator_i.c</InterfaceIdentifierFileName>
-      <ProxyFileName>WTLCalculator_p.c</ProxyFileName>
+      <HeaderFileName>CalcGraphics.h</HeaderFileName>
+      <InterfaceIdentifierFileName>CalcGraphics_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>CalcGraphics_p.c</ProxyFileName>
       <GenerateStublessProxies>true</GenerateStublessProxies>
-      <TypeLibraryName>$(IntDir)/WTLCalculator.tlb</TypeLibraryName>
+      <TypeLibraryName>$(IntDir)/CalcGraphics.tlb</TypeLibraryName>
       <DllDataFileName />
     </Midl>
   </ItemDefinitionGroup>
@@ -189,43 +189,34 @@
     <Midl>
       <MkTypLibCompatible>false</MkTypLibCompatible>
       <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <HeaderFileName>WTLCalculator.h</HeaderFileName>
-      <InterfaceIdentifierFileName>WTLCalculator_i.c</InterfaceIdentifierFileName>
-      <ProxyFileName>WTLCalculator_p.c</ProxyFileName>
+      <HeaderFileName>CalcGraphics.h</HeaderFileName>
+      <InterfaceIdentifierFileName>CalcGraphics_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>CalcGraphics_p.c</ProxyFileName>
       <GenerateStublessProxies>true</GenerateStublessProxies>
-      <TypeLibraryName>$(IntDir)/WTLCalculator.tlb</TypeLibraryName>
+      <TypeLibraryName>$(IntDir)/CalcGraphics.tlb</TypeLibraryName>
       <DllDataFileName />
     </Midl>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="AboutDlg.cpp" />
-    <ClCompile Include="ButtonsCanvas.cpp" />
-    <ClCompile Include="CCalculatorLogic.cpp" />
-    <ClCompile Include="MainFrm.cpp" />
+    <ClCompile Include="CalcGraphics.cpp" />
+    <ClCompile Include="MainDlg.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
-    <ClCompile Include="WTLCalculator.cpp" />
-    <ClCompile Include="WTLCalculatorView.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="AboutDlg.h" />
-    <ClInclude Include="ButtonsCanvas.h" />
-    <ClInclude Include="CCalculatorLogic.h" />
-    <ClInclude Include="MainFrm.h" />
+    <ClInclude Include="MainDlg.h" />
     <ClInclude Include="resource.h" />
     <ClInclude Include="stdafx.h" />
-    <ClInclude Include="WTLCalculatorView.h" />
   </ItemGroup>
   <ItemGroup>
-    <ResourceCompile Include="WTLCalculator.rc" />
+    <ResourceCompile Include="CalcGraphics.rc" />
   </ItemGroup>
   <ItemGroup>
-    <Image Include="res\toolbar.bmp" />
-    <Image Include="res\WTLCalculator.ico" />
+    <Image Include="res\CalcGraphics.ico" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

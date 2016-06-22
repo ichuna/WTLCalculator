@@ -5,6 +5,8 @@ VisualStudioVersion = 14.0.23107.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "WTLCalculator", "WTLCalculator\WTLCalculator.vcxproj", "{E66C7F1D-20F3-4894-9F08-6E5DF72C27A7}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CalcGraphics", "..\CalcGraphics\CalcGraphics.vcxproj", "{1EF80893-E0B7-4E98-BE1D-6B17106BF210}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -21,6 +23,14 @@ Global
 		{E66C7F1D-20F3-4894-9F08-6E5DF72C27A7}.Release|x64.Build.0 = Release|x64
 		{E66C7F1D-20F3-4894-9F08-6E5DF72C27A7}.Release|x86.ActiveCfg = Release|Win32
 		{E66C7F1D-20F3-4894-9F08-6E5DF72C27A7}.Release|x86.Build.0 = Release|Win32
+		{1EF80893-E0B7-4E98-BE1D-6B17106BF210}.Debug|x64.ActiveCfg = Debug|x64
+		{1EF80893-E0B7-4E98-BE1D-6B17106BF210}.Debug|x64.Build.0 = Debug|x64
+		{1EF80893-E0B7-4E98-BE1D-6B17106BF210}.Debug|x86.ActiveCfg = Debug|Win32
+		{1EF80893-E0B7-4E98-BE1D-6B17106BF210}.Debug|x86.Build.0 = Debug|Win32
+		{1EF80893-E0B7-4E98-BE1D-6B17106BF210}.Release|x64.ActiveCfg = Release|x64
+		{1EF80893-E0B7-4E98-BE1D-6B17106BF210}.Release|x64.Build.0 = Release|x64
+		{1EF80893-E0B7-4E98-BE1D-6B17106BF210}.Release|x86.ActiveCfg = Release|Win32
+		{1EF80893-E0B7-4E98-BE1D-6B17106BF210}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
