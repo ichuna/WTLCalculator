@@ -199,7 +199,6 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="AboutDlg.cpp" />
-    <ClCompile Include="ButtonsCanvas.cpp" />
     <ClCompile Include="CCalculatorLogic.cpp" />
     <ClCompile Include="MainFrm.cpp" />
     <ClCompile Include="stdafx.cpp">
@@ -213,7 +212,6 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="AboutDlg.h" />
-    <ClInclude Include="ButtonsCanvas.h" />
     <ClInclude Include="CCalculatorLogic.h" />
     <ClInclude Include="MainFrm.h" />
     <ClInclude Include="resource.h" />

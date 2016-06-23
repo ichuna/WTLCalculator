@@ -9,9 +9,6 @@
       <UniqueIdentifier>{35b9d369-c25e-4796-8956-bb346379a9fa}</UniqueIdentifier>
       <Extensions>h;hpp;hxx;hm;inl;inc</Extensions>
     </Filter>
-    <Filter Include="Header Files\ButtonsCanvas">
-      <UniqueIdentifier>{a55a0045-39de-41c6-af66-e04c02c5bd6c}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Header Files\Resource Files">
       <UniqueIdentifier>{b4afec7c-df84-4895-a5f3-dfb5af2e7c2f}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;jpg;jpeg;jpe;manifest</Extensions>
@@ -33,9 +30,6 @@
     <ClCompile Include="AboutDlg.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="ButtonsCanvas.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="CCalculatorLogic.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -55,9 +49,6 @@
     </ClInclude>
     <ClInclude Include="resource.h">
       <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="ButtonsCanvas.h">
-      <Filter>Header Files\ButtonsCanvas</Filter>
     </ClInclude>
     <ClInclude Include="CCalculatorLogic.h">
       <Filter>Header Files</Filter>

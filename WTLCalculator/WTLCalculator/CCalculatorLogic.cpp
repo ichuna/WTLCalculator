@@ -19,24 +19,16 @@ void CCalculatorLogic::AppendOperation(int operation)
 {
 	if (operation == clear)
 	{
-		if (m_right.empty())
-		{
-			m_left.clear();
-		}
-		else
-		{
-			m_right.clear();
-		}
+		m_right.empty() ? m_left.clear() : m_right.clear();
 		return;
 	}
-	if (m_operationType == none && !m_right.empty())
+	if (m_operationType == none)
 	{
-		m_left = m_right;
-		m_right.clear();
-		m_operationType = static_cast<OperationType>(operation);
-	}
-	else if (!m_left.empty() && m_operationType == none)
-	{
+		if (!m_right.empty())
+		{
+			m_left = m_right;
+			m_right.clear();
+		}
 		m_operationType = static_cast<OperationType>(operation);
 	}
 	else
@@ -62,26 +54,25 @@ wchar_t CCalculatorLogic::OperationTypeToChar(OperationType const & opType)
 	return '\r';
 }
 
-float CCalculatorLogic::CalculateExpression()
+void CCalculatorLogic::CalculateExpression()
 {
-	double temp;
+	int temp;
 	switch (m_operationType)
 	{
 	case minus:
-		temp = _wtof(m_left.c_str()) - _wtof(m_right.c_str());
+		temp = _wtoi(m_left.c_str()) - _wtoi(m_right.c_str());
 		break;
 	case plus:
-		temp = _wtof(m_left.c_str()) + _wtof(m_right.c_str());
+		temp = _wtoi(m_left.c_str()) + _wtoi(m_right.c_str());
 		break;
 	case multiply:
-		temp = _wtof(m_left.c_str()) + _wtof(m_right.c_str());
+		temp = _wtoi(m_left.c_str()) * _wtoi(m_right.c_str());
 		break;
 	case div:
-		temp = _wtof(m_left.c_str()) + _wtof(m_right.c_str());
+		temp = _wtoi(m_left.c_str()) / _wtoi(m_right.c_str());
 		break;
 	}
 
 	m_left = std::to_wstring(temp);
 	m_right.clear();
-	return 0;
 }

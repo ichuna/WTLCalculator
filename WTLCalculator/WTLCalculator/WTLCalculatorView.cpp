@@ -13,26 +13,8 @@ CWTLCalculatorView::CWTLCalculatorView()
 
 BOOL CWTLCalculatorView::PreTranslateMessage(MSG* pMsg)
 {
-	//if (::GetDlgCtrlID(pMsg->hwnd) == ID_0_BUTTON && pMsg->message == WM_LBUTTONDOWN)
-	//{
-	//};
-
 	auto current = m_calcLogic.GetCurrentValue();
 	m_calcDisplay.SetWindowText(LPCTSTR(current.c_str()));
-
-	//if (pMsg->message == WM_MOUSEMOVE && (pMsg->wParam & MK_LBUTTON))
-	//{
-	//	CPoint p;
-	//	GetCursorPos(&p);
-	//	CRect r;
-	//	GetWindowRect(&r);
-	//	if (r.PtInRect(p))
-	//	{
-	//		ReleaseCapture();
-	//		MessageBox(L"LOOL");
-	//		return 1;
-	//	}
-	//}
 
 	return CWindow::IsDialogMessage(pMsg);
 }

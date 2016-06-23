@@ -1,5 +1,5 @@
 #pragma once
-#include <boost/optional.hpp>
+#include <string>
 
 class CCalculatorLogic
 {
@@ -19,7 +19,7 @@ public:
 	void AppendOperation(int operation);
 private:
 	static wchar_t OperationTypeToChar(OperationType const &opType);
-	float CalculateExpression();
+	void CalculateExpression();
 private:
 	OperationType m_operationType = none;
 	std::wstring m_left;
